@@ -8,6 +8,12 @@ app.use(cors());
 
 connectDB();
 
+app.get("/", (req,res)=> {
+    res.send({
+        activeStatus: true,
+        error:false
+    })
+})
 app.use("/api/auth", require("./routes/auth"));
 app.use("/api/attendance", require("./routes/attendance"));
 app.use("/api/students", require("./routes/student"));  // 🔥 IMPORTANT FIX
