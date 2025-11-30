@@ -25,7 +25,7 @@ const AttendancePage = () => {
   useEffect(() => {
     const fetchStudents = async () => {
       try {
-        const { data } = await axios.get(`http://localhost:5000/api/students/class/${selectedClass}`);
+        const { data } = await axios.get(`https://attendance-system-project-60.onrender.com//api/students/class/${selectedClass}`);
         // Ensure data is an array
         if (Array.isArray(data)) {
           setStudents(data);
@@ -51,7 +51,7 @@ const AttendancePage = () => {
 
   const submitAttendance = async () => {
     try {
-      await axios.post('http://localhost:5000/api/attendance/mark', {
+      await axios.post('https://attendance-system-project-60.onrender.com//api/attendance/mark', {
         attendanceData: attendance,
         date: date,
       });
