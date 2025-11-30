@@ -29,7 +29,7 @@ const Login = () => {
 
     try {
       const response = await axios.post(
-        'https://attendance-system-project-60.onrender.com//api/auth/login',
+        'https://attendance-system-project-60.onrender.com/api/auth/login',
         { email, password }
       );
 
