@@ -27,7 +27,7 @@ const ClasswiseAttendance = () => {
       try {
         setLoading(true);
         const { data } = await axios.get(
-          `https://attendance-system-project-60.onrender.com//api/attendance/classwise/${className}`
+          `https://attendance-system-project-60.onrender.com/api/attendance/classwise/${className}`
         );
         if (Array.isArray(data)) {
           setAttendanceData(data);
